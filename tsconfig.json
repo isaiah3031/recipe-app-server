@@ -1,0 +1,36 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "skipLibCheck": true,
+    "extensions": [
+      ".tsx",
+      ".ts",
+      ".js"
+    ],
+    "moduleResolution": "node",
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "commonjs",
+    "strict": true,
+    "rootDir": ".",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "@local/*": [
+        "src/*"
+      ]
+    },
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "./src/**/__tests__/**/*",
+    "./src/**/__fixtures__/**/*",
+    "./src/**/*.test.js",
+    "./src/**/*.spec.js",
+    "./src/tests",
+    "node_modules",
+    "dist"
+  ],
+}
